@@ -1,0 +1,147 @@
+/* --- Página de Detalles Profesional --- */
+
+.details-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    background-color: var(--white);
+}
+
+/* 1. Grid de Ubicación */
+.location-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.location-image {
+    height: 550px;
+    background: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1000') center/cover no-repeat;
+    box-shadow: 25px 25px 0px var(--cream);
+    border-radius: 10px;
+}
+
+.location-info h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    color: var(--dark);
+}
+
+.location-info p {
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+
+/* 2. Grid de Experiencia Rediseñado */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-top: 50px;
+}
+
+.experience-item {
+    background: var(--cream);
+    padding: 60px 40px;
+    text-align: center;
+    border: 1px solid #eee;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* Marco dorado interno decorativo */
+.experience-item::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid var(--gold);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.experience-item h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    color: var(--dark);
+    position: relative;
+}
+
+/* Línea decorativa bajo el título */
+.experience-item h4::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    font-size: 1rem; /* Letra más grande */
+    color: var(--muted);
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.menu-list li strong {
+    display: block;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    font-size: 1.05rem; /* Letra más grande */
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+.experience-item p strong {
+    color: var(--dark);
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+}
+
+/* 3. Sección de Cierre */
+.extra-info {
+    margin-top: 100px;
+    padding: 80px 40px;
+    border: 1px solid var(--gold);
+    text-align: center;
+}
+
+.extra-info p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--dark);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .experience-grid { grid-template-columns: 1fr; }
+    .location-grid { grid-template-columns: 1fr; }
+}
