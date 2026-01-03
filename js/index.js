@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Inicializar animaciones
     AOS.init({ duration: 1200, once: true });
     
     // Efecto scroll en header
@@ -12,8 +13,4 @@ document.addEventListener("DOMContentLoaded", function () {
             header.style.boxShadow = "none";
         }
     });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    AOS.init({ duration: 1200 });
 });

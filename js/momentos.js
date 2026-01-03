@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
         parallax: true,
 
         autoplay: {
-            delay: 3000,
+            delay: 3000, // Pasa cada 3 segundos
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+            pauseOnMouseEnter: true, // SE PARA si pones el ratón encima
         },
 
         navigation: {
@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
             el: ".swiper-pagination",
             clickable: true,
             dynamicBullets: true,
-            dynamicMainBullets: 1,
         },
     });
 });
