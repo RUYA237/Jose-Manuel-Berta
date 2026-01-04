@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
 :root {
     --gold: #d4af37;
     --cream: #fcfaf8;
@@ -20,15 +22,50 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     background-color: var(--white);
     color: var(--dark);
-    line-height: 1.8;
+    line-height: 1.7; /* Ligeramente más compacto */
     overflow-x: hidden;
-    font-size: 15px;
+    font-size: 14px; /* Reducido de 15px a 14px para alejar la vista */
+    font-weight: 300;
 }
 
-/* Aceleración por hardware para animaciones AOS */
+/* --- APLICACIÓN DE FUENTES SEGÚN IMÁGENES --- */
+
+/* Títulos (Estilo "NUESTROS MOMENTOS") */
+h1, h2, h3, h4, 
+.section-title, 
+.logo a, 
+.timeline-date, 
+.btn-gold {
+    font-family: 'Cinzel', serif !important;
+    text-transform: uppercase;
+    letter-spacing: 4px !important; /* Un poco menos de espacio para que no ocupe tanto ancho */
+}
+
+/* Cuerpo de texto (Estilo narrativo) */
+p, 
+.moments-description, 
+.nav-links a, 
+.story-description,
+.location-info p,
+footer p {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 300;
+}
+
+/* Citas y frases especiales */
+.intro-text, 
+.swiper-caption {
+    font-family: 'Montserrat', sans-serif !important;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* --- OPTIMIZACIÓN Y DISEÑO EDITORIAL REDUCIDO --- */
+
 [data-aos] {
     will-change: transform, opacity;
 }
@@ -37,7 +74,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10%;
+    padding: 10px 10%; /* Reducido de 15px a 10px de altura */
     background: var(--white);
     position: sticky;
     top: 0;
@@ -46,26 +83,22 @@ header {
 }
 
 .logo a {
-    font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
-    letter-spacing: 4px;
+    font-size: 0.95rem; /* Reducido de 1.1rem */
     text-decoration: none;
     color: var(--dark);
-    text-transform: uppercase;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 30px; /* Reducido de 40px */
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--dark);
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 0.65rem; /* Reducido de 0.7rem */
+    letter-spacing: 1.5px;
 }
 
 .hero {
@@ -80,116 +113,73 @@ header {
 }
 
 .hero h1 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.8rem, 7vw, 3.5rem);
-    letter-spacing: 12px;
+    font-size: clamp(1.5rem, 5vw, 2.8rem); /* Escala de títulos más pequeña */
+    letter-spacing: 10px !important;
 }
 
 .history-section {
-    padding: 120px 10%;
+    padding: 80px 12%; /* Reducido de 120px a 80px para compactar */
     background-color: var(--cream);
     text-align: center;
 }
 
 .container-narrow {
-    max-width: 750px;
+    max-width: 650px; /* Reducido de 750px */
     margin: 0 auto;
 }
 
 .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-    letter-spacing: 5px;
+    font-size: 1.4rem; /* Reducido de 1.8rem */
+    margin-bottom: 30px;
 }
 
-.story-intro { margin-bottom: 100px; }
+.story-intro { margin-bottom: 60px; } /* Reducido de 100px */
 
 .intro-text {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.4rem;
+    font-size: 1.1rem; /* Reducido de 1.4rem */
     color: var(--muted);
-    margin-bottom: 25px;
-}
-
-.story-description {
-    font-size: 0.95rem;
-    color: var(--muted);
-    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 .timeline {
-    max-width: 550px;
+    max-width: 500px; /* Reducido de 550px */
     margin: 0 auto;
     position: relative;
-    padding-left: 40px;
+    padding-left: 35px;
     border-left: 1px solid var(--gold);
     text-align: left;
 }
 
-.timeline-item { position: relative; margin-bottom: 50px; }
+.timeline-item { position: relative; margin-bottom: 40px; } /* Reducido de 50px */
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -45.5px;
-    top: 8px;
-    width: 9px;
-    height: 9px;
+    left: -40.5px; /* Ajustado por el nuevo padding */
+    top: 6px;
+    width: 8px;
+    height: 8px;
     background-color: var(--gold);
     border-radius: 50%;
 }
 
 .timeline-date {
-    font-family: 'Cinzel', serif;
-    color: var(--gold);
-    font-size: 0.8rem;
-    letter-spacing: 2px;
+    font-size: 0.7rem; /* Reducido de 0.8rem */
 }
 
 footer {
-    padding: 80px 20px;
+    padding: 60px 20px; /* Reducido de 80px */
     text-align: center;
-    font-size: 0.65rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    font-size: 0.6rem; /* Reducido de 0.65rem */
+    letter-spacing: 2px;
     color: var(--muted);
-}
-
-/* ... tus variables ... */
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.8;
-    font-size: 15px; /* Texto un pelín más pequeño para alejarlo */
-}
-
-/* Evita tirones en animaciones */
-[data-aos] {
-    will-change: transform, opacity;
-}
-
-header {
-    padding: 15px 10%; /* Margen lateral amplio */
-}
-
-.hero h1 {
-    font-size: clamp(1.8rem, 7vw, 3.5rem); /* Título más fino */
-    letter-spacing: 12px;
-}
-
-.history-section {
-    padding: 120px 12%; /* Mucho espacio para que la historia respire */
-}
-
-.container-narrow {
-    max-width: 750px; /* Contenedor estrecho para estilo editorial */
-    margin: 0 auto;
+    border-top: 1px solid #eee;
 }
 
 @media (max-width: 768px) {
-    header { flex-direction: column; gap: 15px; padding: 20px 5%; }
+    header { flex-direction: column; gap: 10px; padding: 15px 5%; }
+    .nav-links { gap: 15px; }
     .timeline { padding-left: 30px; margin-left: 10px; }
-    .timeline-item::before { left: -36px; }
+    .timeline-item::before { left: -35px; }
+    .hero h1 { font-size: 1.8rem; }
 }
