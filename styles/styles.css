@@ -157,6 +157,37 @@ footer {
     color: var(--muted);
 }
 
+/* ... tus variables ... */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    font-size: 15px; /* Texto un pelín más pequeño para alejarlo */
+}
+
+/* Evita tirones en animaciones */
+[data-aos] {
+    will-change: transform, opacity;
+}
+
+header {
+    padding: 15px 10%; /* Margen lateral amplio */
+}
+
+.hero h1 {
+    font-size: clamp(1.8rem, 7vw, 3.5rem); /* Título más fino */
+    letter-spacing: 12px;
+}
+
+.history-section {
+    padding: 120px 12%; /* Mucho espacio para que la historia respire */
+}
+
+.container-narrow {
+    max-width: 750px; /* Contenedor estrecho para estilo editorial */
+    margin: 0 auto;
+}
+
 @media (max-width: 768px) {
     header { flex-direction: column; gap: 15px; padding: 20px 5%; }
     .timeline { padding-left: 30px; margin-left: 10px; }

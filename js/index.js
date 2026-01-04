@@ -19,3 +19,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Animaciones más rápidas (800ms) para que no parezca pesado
+    AOS.init({ 
+        duration: 800, 
+        once: true,
+        offset: 50 
+    });
+    
+    const header = document.getElementById("main-header");
+    
+    // El flag { passive: true } es lo que quita el lag del scroll
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header.style.background = "rgba(255,255,255,0.98)";
+            header.style.boxShadow = "0 2px 10px rgba(0,0,0,0.05)";
+            header.style.padding = "10px 10%";
+        } else {
+            header.style.background = "#fff";
+            header.style.boxShadow = "none";
+            header.style.padding = "15px 10%";
+        }
+    }, { passive: true });
+});
