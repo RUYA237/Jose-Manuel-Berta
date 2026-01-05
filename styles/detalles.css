@@ -142,6 +142,100 @@
     color: var(--dark);
 }
 
+.lista-etiqueta {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.lista-etiqueta li {
+    font-size: 1rem; /* Letra más grande */
+    color: var(--muted);
+    margin-bottom: 25px;
+    line-height: 1.4;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo específico para el título Dress Code */
+.lista-etiqueta li strong {
+    display: block;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Título de la sección (Transporte, Etiqueta, etc.) */
+.titulo-etiqueta {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Estilo de la lista */
+.lista-etiqueta {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-etiqueta li {
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: 25px;
+    line-height: 1.4;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo para el encabezado dorado (Servicio de Autobuses) */
+.lista-etiqueta li strong {
+    display: block;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* --- Estilos para el Mapa Interactivo --- */
+
+.contenedor-mapa {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #f2f2f2; /* Línea sutil de separación */
+}
+
+/* Aplicando tu estilo dorado exacto */
+.indicador-ubicacion {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.contenedor-mapa iframe {
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    filter: grayscale(0.2); /* Toque elegante: un poco más gris para que no desentone */
+    transition: filter 0.4s ease;
+}
+
+.contenedor-mapa iframe:hover {
+    filter: grayscale(0); /* Al pasar el ratón recupera el color total */
+}
+
+/* Ajuste responsive para móviles */
+@media (max-width: 768px) {
+    .contenedor-mapa iframe {
+        height: 220px;
+    }
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .experience-grid { grid-template-columns: 1fr; }
