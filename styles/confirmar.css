@@ -25,7 +25,7 @@
     width: 100%;
     padding: 12px 0;
     border: none;
-    border-bottom: 1px solid #ddd; /* Solo línea inferior para más estética */
+    border-bottom: 1px solid #ddd;
     background: transparent;
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
@@ -41,7 +41,7 @@
 }
 
 .hidden-field {
-    display: none; /* Oculto por defecto */
+    display: none;
     animation: fadeIn 0.5s forwards;
 }
 
@@ -64,7 +64,12 @@
     transition: opacity 0.3s;
 }
 
-.btn-confirm:hover {
+.btn-confirm:disabled {
+    background: #666;
+    cursor: not-allowed;
+}
+
+.btn-confirm:hover:not(:disabled) {
     opacity: 0.8;
 }
 
