@@ -233,6 +233,41 @@ footer {
     /* Si quieres puntitos o líneas entre números puedes añadirlos aquí */
 }
 
+/* --- RESPONSIVE HERO TITLE --- */
+
+/* Estilo por defecto (Ordenador/Tablet) */
+.hero-title span {
+    display: inline-block;
+}
+
+.hero-title .ampersand {
+    margin: 0 20px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* Estilo específico para Móvil (menos de 768px) */
+@media (max-width: 768px) {
+    .hero-title {
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center;
+        gap: 10px; /* Espacio entre nombres */
+    }
+
+    .hero-title span {
+        display: block;
+        font-size: 2.8rem; /* Ajusta el tamaño para que quepa bien en pantalla */
+        line-height: 1.1;
+    }
+
+    .hero-title .ampersand {
+        font-size: 2rem; /* La "&" un poco más pequeña queda más estética */
+        margin: 5px 0;
+        display: block;
+    }
+}
+
 @media (max-width: 480px) {
     .t-item span { font-size: 1.8rem; }
     .timer-flex { gap: 15px; }
