@@ -1,11 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".rsvp-form");
+function toggleAcompanante() {
+    const select = document.getElementById('acompanante-select');
+    const hiddenField = document.getElementById('hidden-acompanante');
     
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            alert("¡Gracias! Tu confirmación para la boda de Berta y José Manuel ha sido enviada.");
-            this.reset();
-        });
+    if (select.value === 'acompanado') {
+        hiddenField.style.display = 'block';
+    } else {
+        hiddenField.style.display = 'none';
     }
-});
+}
+
+function toggleNinos() {
+    const select = document.getElementById('ninos-select');
+    const hiddenField = document.getElementById('hidden-ninos');
+    
+    if (select.value === 'si') {
+        hiddenField.style.display = 'block';
+    } else {
+        hiddenField.style.display = 'none';
+    }
+}

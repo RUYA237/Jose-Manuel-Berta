@@ -1,39 +1,76 @@
-.rsvp-container {
-    padding: 100px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Estilos del Formulario */
+.wedding-form {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: left;
 }
 
-.rsvp-form {
-    width: 100%;
-    max-width: 550px;
-    background: var(--white);
-    padding: clamp(20px, 5vw, 50px);
+.form-group {
+    margin-bottom: 25px;
 }
 
-.rsvp-form input, .rsvp-form select, .rsvp-form textarea {
-    width: 100%;
-    padding: 15px 0;
-    margin-bottom: 35px;
-    border: none;
-    border-bottom: 1px solid #ddd;
+.form-group label {
+    display: block;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    background: transparent;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: #666;
 }
 
-.btn-gold {
-    background: var(--dark);
-    color: white;
-    padding: 20px;
+.form-group input, 
+.form-group select, 
+.form-group textarea {
     width: 100%;
+    padding: 12px 0;
     border: none;
+    border-bottom: 1px solid #ddd; /* Solo línea inferior para más estética */
+    background: transparent;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-bottom: 1px solid #000;
+}
+
+.hidden-field {
+    display: none; /* Oculto por defecto */
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-confirm {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     cursor: pointer;
-    font-family: 'Cinzel', serif;
-    transition: background 0.3s;
+    margin-top: 20px;
+    transition: opacity 0.3s;
 }
 
-.btn-gold:hover { background: var(--gold); }
+.btn-confirm:hover {
+    opacity: 0.8;
+}
+
+.form-subtitle {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #888;
+}

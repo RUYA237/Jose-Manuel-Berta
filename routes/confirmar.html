@@ -21,20 +21,57 @@
         </nav>
     </header>
 
-    <section class="rsvp-container">
-        <h2 class="section-title">Confirmación de Asistencia</h2>
-        <form class="rsvp-form">
-            <input type="text" placeholder="Nombre Completo" required>
-            <select required>
-                <option value="" disabled selected>¿Asistirás?</option>
-                <option value="si">Sí, con mucho gusto</option>
-                <option value="no">Lo lamento, no puedo</option>
-            </select>
-            <textarea placeholder="Alergias o notas adicionales"></textarea>
-            <button type="submit" class="btn-gold">Enviar Confirmación</button>
+<section class="confirm-section" data-aos="fade-up">
+    <div class="container-narrow">
+        <h2 class="section-title">Confirmar Asistencia</h2>
+        <p class="form-subtitle">Por favor, rellena los datos para ayudarnos con la organización.</p>
+
+        <form action="#" method="POST" class="wedding-form">
+            <div class="form-group">
+                <label for="nombre">Tu Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="domicilio">Domicilio</label>
+                <input type="text" id="domicilio" name="domicilio" required placeholder="Calle, número, ciudad y CP">
+            </div>
+
+            <div class="form-group">
+                <label>¿Vendrás solo o acompañado?</label>
+                <select id="acompanante-select" name="acompanante_tipo" onchange="toggleAcompanante()">
+                    <option value="solo">Vengo solo/a</option>
+                    <option value="acompanado">Vengo acompañado/a</option>
+                </select>
+            </div>
+
+            <div id="hidden-acompanante" class="form-group hidden-field">
+                <label for="nombre-acompanante">Nombre completo del acompañante</label>
+                <input type="text" id="nombre-acompanante" name="nombre_acompanante" placeholder="Nombre y apellidos">
+            </div>
+
+            <div class="form-group">
+                <label>¿Vienes con niños?</label>
+                <select id="ninos-select" name="vienen_ninos" onchange="toggleNinos()">
+                    <option value="no">No</option>
+                    <option value="si">Sí</option>
+                </select>
+            </div>
+
+            <div id="hidden-ninos" class="form-group hidden-field">
+                <label for="detalles-ninos">¿Cuántos niños y qué edades tienen?</label>
+                <textarea id="detalles-ninos" name="detalles_ninos" rows="2" placeholder="Ej: 2 niños, 4 y 7 años"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="alergias">¿Alguna alergia o intolerancia?</label>
+                <input type="text" id="alergias" name="alergias" placeholder="Ej: Celíaco, sin lactosa...">
+            </div>
+
+            <button type="submit" class="btn-confirm">Enviar Confirmación</button>
         </form>
-        <a href="../index.html" style="display:block; margin-top:20px; color:#8e8279; text-align: center;">Volver</a>
-    </section>
+    </div>
+</section>
 
     <footer>
         <p>© 2026 José & Berta — Diseñado con Amor</p>
