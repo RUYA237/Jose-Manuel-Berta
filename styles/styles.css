@@ -176,6 +176,68 @@ footer {
     border-top: 1px solid #eee;
 }
 
+/* Estilo Minimalista del Temporizador */
+.timer-wrap {
+    padding: 40px 0; /* Menos espacio que antes */
+    text-align: center;
+    background: transparent; /* Se mezcla con tu fondo actual */
+}
+
+.timer-content {
+    max-width: 500px; /* Más estrecho y elegante */
+    margin: 0 auto;
+}
+
+.timer-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #888; /* Gris suave */
+    margin-bottom: 20px;
+}
+
+.timer-flex {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espacio equilibrado */
+}
+
+.t-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.t-item span {
+    font-family: 'Playfair Display', serif; /* La fuente elegante de tu web */
+    font-size: 2.2rem; /* Tamaño más contenido */
+    font-weight: 400;
+    color: #333; /* Color oscuro suave, cámbialo a #fff si tu fondo es oscuro */
+    line-height: 1;
+}
+
+.t-item label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #aaa;
+    margin-top: 8px;
+}
+
+/* Línea divisoria muy fina entre los números (opcional) */
+.t-item:not(:last-child):after {
+    content: '';
+    position: absolute;
+    /* Si quieres puntitos o líneas entre números puedes añadirlos aquí */
+}
+
+@media (max-width: 480px) {
+    .t-item span { font-size: 1.8rem; }
+    .timer-flex { gap: 15px; }
+}
+
 @media (max-width: 768px) {
     header { flex-direction: column; gap: 10px; padding: 15px 5%; }
     .nav-links { gap: 15px; }

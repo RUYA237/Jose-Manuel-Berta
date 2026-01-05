@@ -43,3 +43,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }, { passive: true });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const weddingDate = new Date("Sep 26, 2026 00:00:00").getTime();
+
+    const updateTimer = setInterval(() => {
+        const now = new Date().getTime();
+        const diff = weddingDate - now;
+
+        if (diff < 0) {
+            clearInterval(updateTimer);
+            document.querySelector(".timer-content").innerHTML = "<p class='timer-subtitle'>¡Es hoy!</p>";
+            return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = d.toString().padStart(2, '0');
+        document.getElementById("hours").innerText = h.toString().padStart(2, '0');
+        document.getElementById("minutes").innerText = m.toString().padStart(2, '0');
+        document.getElementById("seconds").innerText = s.toString().padStart(2, '0');
+    }, 1000);
+});
