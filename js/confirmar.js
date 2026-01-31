@@ -10,9 +10,12 @@ function toggleNinos() {
     hiddenField.style.display = (select.value === 'si') ? 'block' : 'none';
 }
 
-// Lógica de envío de datos
+// Lógica de envío de datos (ACTUALIZADA)
 document.getElementById("wedding-form").addEventListener("submit", function(e) {
     e.preventDefault();
+
+    // 1. URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzLJPohg8irriJD5uY5nz_R82fBokhqt_rFXdYTXycGHiRs6E68LIAll3RM57s5wwU/exec';
 
     const form = e.target;
     const btn = document.getElementById("submit-btn");
@@ -21,23 +24,21 @@ document.getElementById("wedding-form").addEventListener("submit", function(e) {
     btn.disabled = true;
     btn.innerText = "Enviando...";
 
-    // Convertimos los datos del formulario a un formato que Google entienda (URLSearchParams)
+    // Usamos FormData directamente para que el script de Google reciba todo bien
     const formData = new FormData(form);
-    const queryString = new URLSearchParams(formData).toString();
 
-    // Enviamos los datos pegados a la URL con el método POST
-    fetch(form.action + "?" + queryString, {
-        method: "POST",
-        mode: "no-cors"
+    fetch(scriptURL, { 
+        method: "POST", 
+        body: formData 
     })
     .then(() => {
-        // Mostramos mensaje de éxito
+        // Mostramos mensaje de éxito (manteniendo tu estilo)
         status.innerText = "¡Gracias! Tu confirmación ha sido recibida.";
         status.style.color = "#28a745";
         status.style.display = "block";
         btn.innerText = "¡Enviado!";
         
-        // Limpiamos el formulario
+        // Limpiamos el formulario y ocultamos tus campos especiales
         form.reset();
         document.getElementById('hidden-acompanante').style.display = 'none';
         document.getElementById('hidden-ninos').style.display = 'none';
