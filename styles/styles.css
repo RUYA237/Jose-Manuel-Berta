@@ -41,7 +41,7 @@ h1, h2, h3, h4,
 .btn-gold {
     font-family: 'Cinzel', serif !important;
     text-transform: uppercase;
-    letter-spacing: 4px !important; /* Un poco menos de espacio para que no ocupe tanto ancho */
+    letter-spacing: 4px !important; 
 }
 
 /* Cuerpo de texto (Estilo narrativo) */
@@ -104,14 +104,14 @@ header {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), 
-                url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=60&w=1200') center/cover no-repeat;
+                url('../assets/images/principal.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
+    background-attachment: fixed; /* Opcional: añade este efecto para que la foto no se mueva al hacer scroll */
 }
-
 .hero h1 {
     font-size: clamp(1.5rem, 5vw, 2.8rem); /* Escala de títulos más pequeña */
     letter-spacing: 10px !important;
