@@ -102,15 +102,16 @@ header {
 }
 
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), 
-                url('../assets/images/principal.png') center/cover no-repeat;
+    height: 100vh; /* Ocupa toda la pantalla */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('../assets/images/principal.png') no-repeat;
+    background-position: center center; /* Centra la imagen horizontal y verticalmente */
+    background-size: cover; /* Ajusta la imagen para llenar el espacio */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
-    background-attachment: fixed; /* Opcional: añade este efecto para que la foto no se mueva al hacer scroll */
 }
 .hero h1 {
     font-size: clamp(1.5rem, 5vw, 2.8rem); /* Escala de títulos más pequeña */
@@ -305,5 +306,19 @@ footer {
 @media (max-width: 768px) {
     .responsive-rings {
         width: 90%;     /* En el móvil ocupará casi todo el ancho */
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        /* En móviles, 'contain' asegura que se vea TODA la imagen sin recortes, 
+           pero deja huecos arriba/abajo. Si prefieres que siga llenando todo, 
+           usamos 'cover' con un ajuste de posición: */
+        background-size: cover;
+        background-position: 50% 20%; /* Ajusta este % para subir o bajar la foto si corta las cabezas */
+        height: 80vh; /* Un poco más baja en móvil para que no tape tanto el texto */
+    }
+
+    .hero-title {
+        font-size: 2.5rem; /* Achicamos un poco el texto para que no pise las caras */
     }
 }
