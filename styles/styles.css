@@ -284,3 +284,26 @@ footer {
     .timeline-item::before { left: -35px; }
     .hero h1 { font-size: 1.8rem; }
 }
+/* Contenedor para centrar y dar espacio */
+.rings-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: var(--cream); /* Asegura que el fondo coincida */
+}
+
+/* Imagen responsive */
+.responsive-rings {
+    max-width: 100%;    /* No permite que la imagen sea más ancha que la pantalla */
+    height: auto;       /* Mantiene la proporción para que no se deforme */
+    width: 600px;       /* Tamaño máximo en ordenadores */
+    display: block;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .responsive-rings {
+        width: 90%;     /* En el móvil ocupará casi todo el ancho */
+    }
+}
