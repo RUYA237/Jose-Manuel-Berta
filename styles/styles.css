@@ -302,6 +302,11 @@ footer {
     display: block;
 }
 
+.confirm-link {
+    color: black;
+    font-size: 1rem;
+}
+
 /* Ajuste para móviles */
 @media (max-width: 768px) {
     .responsive-rings {
