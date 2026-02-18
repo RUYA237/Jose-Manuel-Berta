@@ -241,3 +241,27 @@
     .experience-grid { grid-template-columns: 1fr; }
     .location-grid { grid-template-columns: 1fr; }
 }
+
+.details-page { background-color: var(--white); }
+
+.location-image { 
+    box-shadow: 25px 25px 0px var(--bg-main); 
+    border: 1px solid var(--accent);
+}
+
+.experience-item { background: var(--bg-main); border: 1px solid var(--accent); }
+
+/* Marco decorativo ahora en Rosa Palo suave */
+.experience-item::before { border: 1px solid var(--accent); opacity: 0.5; }
+
+.experience-item h4::after { background: var(--primary); }
+
+.menu-list li strong { color: var(--primary); }
+.menu-list li { color: var(--dark); opacity: 0.8; }
+
+.extra-info { border: 1px solid var(--primary); background: var(--white); }
+.extra-info p { color: var(--dark); font-family: 'Playfair Display', serif; }
+
+.lista-etiqueta li strong { color: var(--primary); }
+
+.contenedor-mapa iframe { border: 2px solid var(--bg-main); filter: sepia(0.2) contrast(0.9); }

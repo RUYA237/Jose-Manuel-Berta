@@ -108,3 +108,20 @@
         transform: scale(0.7);
     }
 }
+
+.gallery-container { padding: clamp(60px, 10vh, 100px) 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+.moments-description { color: var(--muted); }
+
+.swiper-container { 
+    border: 1px solid var(--bg-main); 
+    box-shadow: 0 10px 30px rgba(92, 61, 93, 0.05); 
+}
+
+.swiper-caption { font-family: 'Playfair Display', serif; font-style: italic; color: var(--white); }
+
+.swiper-pagination-bullet-active { background: var(--primary); }
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--white);
+    background-color: rgba(92, 61, 93, 0.4);
+}
