@@ -97,7 +97,34 @@
     height: 100%;
     object-fit: cover;
 }
+/* Ajuste del contenedor principal del Swiper */
+.hero__swiper {
+    width: 100%;
+    height: 500px; /* Altura para pantallas grandes */
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px 0;
+}
 
+/* Ajuste de las imágenes para que no se deformen */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen rellene el espacio sin estirarse */
+    display: block;
+}
+
+/* RESPONSIVE: Ajustes para móviles */
+@media (max-width: 768px) {
+    .hero__swiper {
+        height: 350px; /* Bajamos la altura en móvil para que se vea mejor */
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        padding: 0 15px;
+    }
+}
 /* Responsive para Swiper */
 @media (max-width: 768px) {
     .swiper-button-next,
