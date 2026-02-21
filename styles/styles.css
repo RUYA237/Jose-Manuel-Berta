@@ -310,6 +310,46 @@ footer {
     text-decoration: none; /* Opcional: quita el subrayado si no lo quieres */
 }
 
+/* Ajuste para la imagen inferior */
+.img-responsive-footer {
+    width: 100%;
+    max-width: 1200px; /* O el ancho original de tu imagen */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    object-fit: cover; /* Mantiene la proporción sin deformar */
+    border-radius: 8px; /* Opcional: bordes suavizados */
+}
+
+/* Reglas de Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Ajuste de contenedores principales para móvil */
+    .container, section {
+        width: 100% !important;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    /* Ajuste de fuentes para mejor lectura en móvil */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* La imagen en móviles ocupará todo el ancho disponible */
+    .img-responsive-footer {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
 /* Ajuste para móviles */
 @media (max-width: 768px) {
     .responsive-rings {
