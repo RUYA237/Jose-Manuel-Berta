@@ -110,10 +110,16 @@ p, .moments-description, .nav-links a, .story-description, .location-info p, foo
     letter-spacing: 10px !important;
 }
 
+/* Estilo para el símbolo & (Ampersand) */
 .hero-title .ampersand {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    margin: 0 20px;
+    font-family: 'Playfair Display', serif !important;
+    font-style: italic !important;
+    text-transform: none !important; /* Evita que Cinzel lo ponga en mayúsculas rígidas */
+    font-weight: 400 !important;
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1.2em; /* Lo hace un poco más grande para que luzca la curva */
+    color: white;    /* Asegura que sea blanco como los nombres */
 }
 
 /* --- 6. HISTORIA Y TIMELINE --- */
