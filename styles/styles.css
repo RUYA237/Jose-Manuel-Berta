@@ -302,9 +302,12 @@ footer {
     display: block;
 }
 
-.confirm-link {
-    color: black;
+.confirm-link, 
+.confirm-link:visited, 
+.confirm-link:active {
+    color: #8b8a51;
     font-size: 1rem;
+    text-decoration: none; /* Opcional: quita el subrayado si no lo quieres */
 }
 
 /* Ajuste para móviles */
